@@ -75,6 +75,10 @@ If pip is not recognized, ensure Python is added to PATH
 Re-run playwright install if browsers aren't working
 On macOS/Linux: check permissions and use sudo if needed
 
+## Good links 
+
+
+
 
 
 
