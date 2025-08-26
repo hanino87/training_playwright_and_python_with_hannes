@@ -77,6 +77,9 @@ On macOS/Linux: check permissions and use sudo if needed
 
 ## Good links 
 
+Playwrights official documentation site 
+
+https://playwright.dev/python/docs/intro
 
 
 
