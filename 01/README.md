@@ -58,7 +58,7 @@ It`s better then pythons built in assertion. Bettfor waiting for element to load
 
 ```Py
 
-def test_heading(page):
+def test_homepage_url(page):
 page.goto("https://www.svt.se")
 
 expect(page).to_have_url("https://www.svt.se/") # do assert that svt homepage has the right url for viewers 
