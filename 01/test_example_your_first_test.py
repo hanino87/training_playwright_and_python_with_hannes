@@ -7,4 +7,10 @@
 ´´´
 
 
-### Test below 
+### Test below for example 
+
+def test_homepage_url(page):
+page.goto("https://www.svt.se")
+
+expect(page).to_have_url("https://www.svt.se/") 
+
