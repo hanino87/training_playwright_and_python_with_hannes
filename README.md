@@ -20,6 +20,22 @@ python --version
 python3 --version if MacOS/Linux 
 
 ```
+Pip packet manger installed
+
+# Verify installation on your terminal 
+
+```bash 
+
+pip --version
+
+pip3 --version if MacOS/Linux 
+
+```
+If you don`t have it download from: pip: https://pip.pypa.io/
+
+## Installation Playwright & Playwright browsers 
+
+
 # Installation Playwright
 
 ```bash
@@ -37,6 +53,11 @@ playwright install
 ```
 This command installs Chromium, Firefox, and WebKit for Playwright to be used in GUI frontend testing 
 
+## ❓ Troubleshooting
+
+If pip is not recognized, ensure Python is added to PATH
+Re-run playwright install if browsers aren't working
+On macOS/Linux: check permissions and use sudo if needed
 
 
 
