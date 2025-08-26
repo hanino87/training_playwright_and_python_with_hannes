@@ -1,7 +1,7 @@
-📘README – Installing Python & Playwright
+## 📘README – Installing Python & Playwright
 This project uses Python and Playwright for automated web testing. Follow the steps below to install the required tools and set up your environment.
 
-🧰Prerequisites
+## 📋 Prerequisites 
 
 Python 3.8+ installed
 (Check with python --version or python3 --version)
@@ -11,7 +11,7 @@ Python 3.8+ installed
 ✅ “Add Python to PATH”
 during installation.
 
-Verify installation on your terminal 
+# Verify installation on your terminal 
 
 ```bash 
 
@@ -20,7 +20,7 @@ python --version
 python3 --version if MacOS/Linux 
 
 ```
-Installation Playwright
+# Installation Playwright
 
 ```bash
 
@@ -28,14 +28,14 @@ pip install playwright
 
 ```
 
-Install Browsers for Playwright
+# Install Browsers for Playwright
 
 ```bash
 
 playwright install
 
 ```
-This command 
+This command installs Chromium, Firefox, and WebKit for Playwright to be used in GUI frontend testing 
 
 
 
