@@ -53,6 +53,22 @@ playwright install
 ```
 This command installs Chromium, Firefox, and WebKit for Playwright to be used in GUI frontend testing 
 
+
+# Install Browsers for Playwright
+
+```bash
+
+playwright install
+
+```
+# Installing Playwright Pytest
+
+```bash
+
+pip install pytest-playwright
+
+```
+
 ## ❓ Troubleshooting
 
 If pip is not recognized, ensure Python is added to PATH
