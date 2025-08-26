@@ -84,6 +84,13 @@ def test_heading(page):
     expect(page).to_have_url("https://www.svt.se/")
 
 ```
+# Good Links 
+
+List of assertion from expect library https://playwright.dev/python/docs/test-assertions
+
+pages metod https://playwright.dev/python/docs/input
+
+
 
 
 
