@@ -29,7 +29,7 @@ def test_go_to_webpage(page: Page):
     page.goto("https://www.svt.se")  # uses metod goto from the Class page to go to a url 
 
 ```
-Import page class 
+Import page class in your python file 
 
 ```py
 from playwright.sync_api import Page
@@ -65,7 +65,7 @@ expect(page).to_have_url("https://www.svt.se/") # do assert that svt homepage ha
 
 ```
 
-Import it in your file 
+Import it in your python file 
 
 ```py
 
@@ -88,7 +88,7 @@ def test_heading(page):
 
 List of assertion from expect library https://playwright.dev/python/docs/test-assertions
 
-pages metod https://playwright.dev/python/docs/input
+Pages action metods on web pages https://playwright.dev/python/docs/input
 
 
 
