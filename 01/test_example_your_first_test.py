@@ -1,9 +1,6 @@
-´´´Write three tests with expect and pages metods from Playwright choose your own website. 
+# Write three tests with expect and pages metods from Playwright choose your own website. 
     
-´´´
-
-
-### Test below for example 
+# Test below for example 
 
 def test_homepage_url(page):
 page.goto("https://www.svt.se") # uses page metod goto to go to a website 
