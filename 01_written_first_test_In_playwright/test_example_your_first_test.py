@@ -2,10 +2,14 @@
     
 # Test below for example 
 
-def test_homepage_url(page):
-page.goto("https://www.svt.se") # uses page metod goto to go to a website 
+from playwright.sync_api import Page, expect
 
-expect(page).to_have_url("https://www.svt.se/") # assert webpage has right url for user 
-
-expect(response).to_be_ok() # assert repsonse from webiste is okay 
-
+# Test 1: Check homepage URL
+def test_homepage_url(page: Page):
+    response = page.goto("https://svt.se)
+    
+    # Assert the page loaded correctly
+    expect(response).to_be_ok()
+    
+    # Assert the page URL is correct
+    expect(page).to_have_url("https://svt.se/")
