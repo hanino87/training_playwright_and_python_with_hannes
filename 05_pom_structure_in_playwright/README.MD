@@ -19,7 +19,7 @@ Using POM in Playwright improves **readability, maintainability, and reusability
 
 ---
 
-## Example: Login Page (POM)
+## Example: Login Page (POM) in a python file login.py which is under a folder called models 
 
 ``` python
 from playwright.sync_api import Page
