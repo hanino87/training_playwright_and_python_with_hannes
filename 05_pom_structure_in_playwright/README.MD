@@ -19,9 +19,9 @@ Using POM in Playwright improves **readability, maintainability, and reusability
 
 ---
 
-## Example: Login Page
+## Example: Login Page (POM)
 
-```python
+``` python
 from playwright.sync_api import Page
 
 class LoginPage:
@@ -41,44 +41,47 @@ class LoginPage:
         self.login_button.click()  # Click login
 ```
 
-### Using the Page Object in a Test
+------------------------------------------------------------------------
 
-```python
+## Using the Page Object in a Test
+
+### ✅ With POM (clean & maintainable)
+
+``` python
+from playwright.sync_api import Page
 from models.login import LoginPage
 
 def test_login(page: Page):
     login_page = LoginPage(page)
-    login_page.navigate_to_homepage()
-    login_page.login(username="admin", password="admin123")  # Use POM method
+    login_page.navigate_to_homepage()  # Use POM navigation
+    login_page.login(username="admin", password="admin123")  # Use POM login method
 ```
 
----
+------------------------------------------------------------------------
 
-This demonstrates **clean, readable, and maintainable tests** using semantic locators and POM.
+### ❌ Without POM (longer & harder to maintain)
 
----
+``` python
+from playwright.sync_api import Page
 
-## Long Test Without POM (Demonstration)
-
-```python
-from playwright.sync_api import Page, expect
-
-def test_login_admin_user(page: Page):
-    # Navigate to homepage
-    page.goto("http://localhost:5173/")  # Go to homepage
-
-    # login admin user
+def test_login_without_pom(page: Page):
+    page.goto("http://localhost:5173/")  # Navigate directly
     page.get_by_placeholder("Username").fill("admin")  # Fill username
     page.get_by_placeholder("Password").fill("admin123")  # Fill password
-    page.get_by_role("button", name="Login").click()  # Click login button
-
+    page.get_by_role("button", name="Login").click()  # Click login
 ```
 
-### Why POM is Better
+------------------------------------------------------------------------
 
-- The test above is long and repetitive.  # Comment: Shows duplication without POM
-- Every locator and action is written directly in the test.  # Comment: Hard to maintain
-- Any UI change requires editing **every test**.  # Comment: Maintains risk
-- Using POM reduces duplication, improves readability, and centralizes maintenance.  # Comment: Cleaner, maintainable code
+## Why Use POM?
 
+-   ✅ **Reduces code duplication**\
+-   ✅ **Centralizes locators** (easy to update when UI changes)\
+-   ✅ **Improves readability** (tests read like business logic)\
+-   ✅ **Reusable methods** across multiple test files
 
+------------------------------------------------------------------------
+
+📌 This README demonstrates how **POM improves test structure** by
+comparing a short, clean POM-based test with a longer,
+harder-to-maintain test without POM.
