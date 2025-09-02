@@ -32,6 +32,9 @@ class LoginPage:
         self.password_input = page.get_by_placeholder("Password")  # Input field for password
         self.login_button = page.get_by_role("button", name="Login")  # Login button
 
+    def navigate_to_homepage(self):
+        self.page.goto("http://localhost:5173/")
+
     def login(self, username: str, password: str):
         self.username_input.fill(username)  # Fill username
         self.password_input.fill(password)  # Fill password
@@ -45,6 +48,7 @@ from models.login import LoginPage
 
 def test_login(page: Page):
     login_page = LoginPage(page)
+    login_page.navigate_to_homepage()
     login_page.login(username="admin", password="admin123")  # Use POM method
 ```
 
