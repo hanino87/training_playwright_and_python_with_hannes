@@ -51,42 +51,6 @@ def test_login(page: Page):
 
 ---
 
-## Example: Home Page
-
-```python
-from playwright.sync_api import Page
-
-class HomePage:
-    def __init__(self, page: Page):
-        self.page = page
-        self.product_name_input = page.get_by_placeholder("Product Name")  # Input field for product name
-        self.create_product_button = page.get_by_role("button", name="Create Product")  # Create Product button
-        self.product_list = page.locator(".product-grid")  # Product grid container
-
-    def create_product(self, name: str):
-        self.product_name_input.fill(name)  # Fill product name
-        self.create_product_button.click()  # Click create product
-        # Return locator for the last product with that name
-        return self.product_list.locator(f".product-item:has-text('{name}')").last
-```
-
----
-
-## Test Example Using POM
-
-```python
-from models.login import LoginPage
-from models.home import HomePage
-
-def test_add_product_to_catalog(page: Page):
-    home_page = HomePage(page)
-    login_page = LoginPage(page)
-
-    home_page.navigate()  # Go to homepage
-    login_page.login(username="admin", password="admin123")  # Log in user
-    home_page.create_product("New Product")  # Add a product
-```
-
 This demonstrates **clean, readable, and maintainable tests** using semantic locators and POM.
 
 ---
