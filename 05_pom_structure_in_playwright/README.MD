@@ -45,7 +45,6 @@ from models.login import LoginPage
 
 def test_login(page: Page):
     login_page = LoginPage(page)
-    page.goto("http://localhost:5173/login")  # Navigate to login page
     login_page.login(username="admin", password="admin123")  # Use POM method
 ```
 
@@ -64,10 +63,7 @@ def test_add_product_to_catalog_without_pom(page: Page):
     # Navigate to homepage
     page.goto("http://localhost:5173/")  # Go to homepage
 
-    # Navigate to signup page
-    page.get_by_role("link", name="Sign Up").click()  # Click Sign Up link
-
-    # Register or login admin user
+    # login admin user
     page.get_by_placeholder("Username").fill("admin")  # Fill username
     page.get_by_placeholder("Password").fill("admin123")  # Fill password
     page.get_by_role("button", name="Login").click()  # Click login button
