@@ -14,10 +14,12 @@ If you don`t follow the prefix convetion then pytest will not see the files and 
 then the test will not running in your terminal. 
 
 
-#🧠 Understanding page: Page in Tests
+🧠 Understanding page: Page in Tests
+
 In Playwright's test functions, the page parameter is an instance of the Page class, automatically provided by the Playwright test runner.
 
 ✅ What is Page?
+
 Page represents a single tab or browser window.
 It provides all the methods you need to navigate, click elements, fill forms, take screenshots, etc.
 
