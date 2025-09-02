@@ -10,7 +10,7 @@ Playwright provides multiple ways to locate elements on a web page:
 
 ```python
 # --- ID locator ---
-element_by_id = page.locator("#my-element-id")
+element_by_id = page.locator("#signup")
 element_by_id.click()
 
 # --- XPath locator ---
@@ -41,7 +41,7 @@ If someone changes your button HTML from `<button class="button-primary">Create 
 
 ```python
 # --- ID locator (semantic style) ---
-element_by_id = page.get_by_test_id("my-element-id")  # replaces: page.locator("#my-element-id")
+element_by_id = page.get_by_id("signup")  # replaces: page.locator("#signup")
 element_by_id.click()
 
 # --- Placeholder locator (semantic style) ---
