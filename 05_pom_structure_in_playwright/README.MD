@@ -72,20 +72,6 @@ def test_add_product_to_catalog_without_pom(page: Page):
     page.get_by_placeholder("Password").fill("admin123")  # Fill password
     page.get_by_role("button", name="Login").click()  # Click login button
 
-    # Add a product
-    page.get_by_placeholder("Product Name").fill("New Product")  # Fill product name
-    page.get_by_role("button", name="Create Product").click()  # Click create product button
-
-    # Verify product appears
-    last_product = page.locator(".product-grid .product-item").last  # Get last product
-    expect(last_product).to_have_text("New Product")  # Assert product text
-
-    # Delete product
-    last_product.locator(".product-item-button").click()  # Click delete button
-
-    # Assert product removed
-    all_products = page.locator(".product-grid .product-item")  # Get all products
-    expect(all_products.locator("text=New Product")).to_have_count(0)  # Verify product removed
 ```
 
 ### Why POM is Better
