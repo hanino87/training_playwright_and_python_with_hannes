@@ -41,8 +41,13 @@ If someone changes your button HTML from `<button class="button-primary">Create 
 
 ```python
 # --- ID locator (semantic style) ---
-element_by_id = page.get_by_id("signup")  # replaces: page.locator("#signup")
+element_by_id = page.get_by_test_id("signup")  # replaces: page.locator("#signup")
 element_by_id.click()
+
+Semantic locators rely on things like role, label, text, placeholder, or data-testid. They do not automatically use the id attribute in the DOM.
+So if your element only has an id (like <div id="signup">) and no data-testid, you cannot use get_by_test_id(). You have to use a standard locator:
+
+
 
 # --- Placeholder locator (semantic style) ---
 element_by_placeholder = page.get_by_placeholder("Username")  # replaces: page.locator('//input[@placeholder="Username"]')
