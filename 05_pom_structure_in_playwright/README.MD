@@ -59,7 +59,7 @@ This demonstrates **clean, readable, and maintainable tests** using semantic loc
 ```python
 from playwright.sync_api import Page, expect
 
-def test_add_product_to_catalog_without_pom(page: Page):
+def test_login_admin_user(page: Page):
     # Navigate to homepage
     page.goto("http://localhost:5173/")  # Go to homepage
 
