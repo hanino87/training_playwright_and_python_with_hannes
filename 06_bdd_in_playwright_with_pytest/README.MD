@@ -25,7 +25,7 @@ playwright install
 pip install pytest
 ```
 
-### 5. pytest-bdd
+### 5. pytest-bdd from pytest module playwright has not it`s own build BDD framework 
 ```bash
 pip install pytest-bdd
 ```
