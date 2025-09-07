@@ -276,10 +276,18 @@ Single page behaviors → multiple scenarios in one feature file
 Cross-page behaviors / user journeys → put the flow in one feature file
 This keeps things organized and readable, and avoids unnecessary fragmentation.
 
-1.  Add more Page Objects for other pages (SignupPage, ProductPage, etc.).
-2.  Integrate BDD with a framework such as **pytest-bdd** or **behave**.
-3.  Write tests in Given/When/Then format for clearer behavior
-    descriptions.
+## When to USE BDD and not BDD in Playwright ? 
+
+•	BDD + POM + Playwright → adds an extra layer (Gherkin feature files + step definitions). This is great if you have non-technical stakeholders who want to read test cases in plain English or if your team practices BDD in development.
+•	POM + Playwright only → much simpler. You don’t need feature files or step mappings. You just write tests in Python using pytest directly, while still keeping Page Objects for clean structure.
+👉 For most automation projects where developers/testers are the main audience, POM with Playwright is enough.
+
+👉 Use BDD only if you specifically need business-readable test cases or are working in a strict BDD environment.
+
+📌 Recommendation for you as a beginner:
+•	Start with POM + Playwright only → it’s simpler, easier to debug, and gets you productive faster.
+•	Once you’re comfortable 
+
 
 ------------------------------------------------------------------------
 
