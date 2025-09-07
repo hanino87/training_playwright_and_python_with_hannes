@@ -1,4 +1,4 @@
-# Beginner's Guide: BDD POM with Playwright
+# Beginner's Guide: BDD POM with Playwright and Pytest
 
 This is a simple introduction on how to combine **BDD (Behavior Driven
 Development)** and **Page Object Model (POM)** with **Playwright** in
