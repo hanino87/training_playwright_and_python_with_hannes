@@ -279,7 +279,9 @@ This keeps things organized and readable, and avoids unnecessary fragmentation.
 ## When to USE BDD and not BDD in Playwright ? 
 
 •	BDD + POM + Playwright → adds an extra layer (Gherkin feature files + step definitions). This is great if you have non-technical stakeholders who want to read test cases in plain English or if your team practices BDD in development.
+
 •	POM + Playwright only → much simpler. You don’t need feature files or step mappings. You just write tests in Python using pytest directly, while still keeping Page Objects for clean structure.
+
 👉 For most automation projects where developers/testers are the main audience, POM with Playwright is enough.
 
 👉 Use BDD only if you specifically need business-readable test cases or are working in a strict BDD environment.
