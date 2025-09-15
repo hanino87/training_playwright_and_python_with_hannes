@@ -231,42 +231,36 @@ def checkout_page(page: Page):
 
 # Step definitions
 
+# Step definitions
+
 @given('I am logged in as "test_user"')
 def login_user(login_page):
-    login_page.navigate()
-    login_page.login("test_user", "password123")
+    login_page.login_as("test_user", "password123")  # wrapper method handles navigation & login
 
 @given('I am on the shopping cart page')
 def go_to_cart(cart_page):
-    cart_page.navigate()
+    cart_page.open()  # wrapper handles navigation
 
 @when('I proceed to checkout')
 def proceed_to_checkout(cart_page):
-    cart_page.proceed_to_checkout()
+    cart_page.checkout()  # clear, simple verb
 
 @when('I enter valid payment details')
 def enter_valid_payment(checkout_page):
-    checkout_page.enter_payment(
-        card_number="4111111111111111",
-        expiry="12/25",
-        cvv="123"
-    )
+    checkout_page.pay_with_valid_card()  # internal page object handles card numbers
 
 @when('I enter invalid payment details')
 def enter_invalid_payment(checkout_page):
-    checkout_page.enter_payment(
-        card_number="0000000000000000",
-        expiry="01/20",
-        cvv="000"
-    )
+    checkout_page.pay_with_invalid_card()  # readable for non-technical
 
 @then('I should see the order confirmation page')
 def verify_order_confirmation(checkout_page):
-    expect(checkout_page.order_confirmation_message).to_be_visible()
+    checkout_page.expect_order_confirmation()  # self-explanatory
 
 @then('I should see a payment error message')
 def verify_payment_error(checkout_page):
-    expect(checkout_page.payment_error_message).to_be_visible()
+    checkout_page.expect_payment_error()  # readable
+
 
 ```
 
