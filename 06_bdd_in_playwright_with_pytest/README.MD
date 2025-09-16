@@ -11,10 +11,8 @@ Before running the tests, install the following:
 ### 1. Python
 - Python 3.8 or higher: [Python Downloads](https://www.python.org/downloads/)
 
-### 2. Node.js
-- Playwright requires Node.js v14+: [Node.js Downloads](https://nodejs.org/)
 
-### 3. Playwright
+### 2. Playwright
 ```bash
 pip install playwright
 playwright install
