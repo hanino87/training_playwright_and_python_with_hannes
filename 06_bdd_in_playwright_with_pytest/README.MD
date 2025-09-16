@@ -126,7 +126,7 @@ Feature: Login functionality
 
 ## Example Project Structure with POM + BDD 
 ```
-tests/
+project/
 │
 ├── features/
 │   └── login.feature
