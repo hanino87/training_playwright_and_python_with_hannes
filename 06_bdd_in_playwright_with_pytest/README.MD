@@ -227,7 +227,6 @@ def cart_page(page: Page):
 def checkout_page(page: Page):
     return CheckoutPage(page)
 
-# Step definitions
 
 # Step definitions
 
@@ -261,6 +260,81 @@ def verify_payment_error(checkout_page):
 
 
 ```
+
+## Generate BDD steps automate in test with BDD generate 
+
+1. Create a feauture file 
+
+2. Run command
+
+```shell 
+
+pytest-bdd generate (folder)/file that ends with exstension .feature 
+
+# pytest-bdd generate features/user.feature
+
+```
+```py
+
+"""User Products feature tests."""
+
+from pytest_bdd import (
+    given,
+    scenario,
+    then,
+    when,
+)
+
+
+@scenario('features/user.feature', 'User with no products can see it has no products')
+def test_user_with_no_products_can_see_it_has_no_products():
+    """User with no products can see it has no products."""
+
+
+@scenario('features/user.feature', 'User with products can see their products')
+def test_user_with_products_can_see_their_products():
+    """User with products can see their products."""
+
+
+@given('a user with username "USERNAME1" and password "PASSWORD_USER1"')
+def _():
+    """a user with username "USERNAME1" and password "PASSWORD_USER1"."""
+    raise NotImplementedError
+
+
+@given('a user with username "USERNAME2" and password "PASSWORD_USER2"')
+def _():
+    """a user with username "USERNAME2" and password "PASSWORD_USER2"."""
+    raise NotImplementedError
+
+
+@when('the user logs in')
+def _():
+    """the user logs in."""
+    raise NotImplementedError
+
+
+@then('the product list should contain "Laptop"')
+def _():
+    """the product list should contain "Laptop"."""
+    raise NotImplementedError
+
+
+@then('the user should see no products')
+def _():
+    """the user should see no products."""
+    raise NotImplementedError
+
+
+@then('the user should see their products')
+def _():
+    """the user should see their products."""
+    raise NotImplementedError
+
+```
+
+
+
 
 ## Key takeaway
 
